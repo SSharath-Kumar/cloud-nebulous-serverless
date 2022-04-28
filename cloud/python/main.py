@@ -24,7 +24,7 @@ SOURCE, TARGET = ('en', 'English'), ('es', 'Spanish')
 
 
 @app.route('/', methods=['GET', 'POST'])
-def translate(gcf_request=None):
+def fractals(gcf_request=None):
     """
     main handler - show form and possibly previous translation
     """
@@ -57,7 +57,7 @@ def translate(gcf_request=None):
         'orig':  {'text': text, 'lc': SOURCE},
         'trans': {'text': translated, 'lc': TARGET},
     }
-    return render_template('index.html', **context)
+    return render_template('fractals.html', **context)
 
 
 if __name__ == '__main__':
